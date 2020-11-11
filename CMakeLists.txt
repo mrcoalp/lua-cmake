@@ -5,8 +5,10 @@ option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 
 if (BUILD_SHARED_LIBS)
     set(LIB_TYPE SHARED)
+    add_definitions(-DLUA_BUILD_AS_DLL)
 else ()
     set(LIB_TYPE STATIC)
+    add_definitions(-ULUA_BUILD_AS_DLL)
 endif ()
 
 file(GLOB_RECURSE SOURCES src/*.c)
