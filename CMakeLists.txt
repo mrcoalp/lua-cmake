@@ -16,4 +16,4 @@ target_include_directories(lua PUBLIC include)
 
 install(TARGETS lua DESTINATION lib)
 file(GLOB_RECURSE INCLUDES include/*.h include/*.hpp)
-install(FILES ${INCLUDES} DESTINATION include/lua)
+install(FILES ${INCLUDES} DESTINATION include)
